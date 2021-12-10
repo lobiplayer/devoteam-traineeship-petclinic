@@ -11,5 +11,7 @@ build:
 
 test:
   stage: test
+  tags:
+    - cipipeline
   script:
     - mvn clean test
