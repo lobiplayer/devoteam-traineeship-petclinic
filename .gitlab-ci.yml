@@ -1,5 +1,11 @@
+stages:
+  - build
+  - test
+
 build:
   stage: build
+  tags:
+    - cipipeline
   script:
     - mvn compile
 
