@@ -1,6 +1,7 @@
 stages:
   - build
   - test
+  - deploy
 
 build:
   stage: build
@@ -15,3 +16,10 @@ test:
     - cipipeline
   script:
     - mvn clean test
+
+deploy:
+  stage: deploy
+  tags:
+    - cipipeline
+  script:
+    - mvn jetty:run-war
