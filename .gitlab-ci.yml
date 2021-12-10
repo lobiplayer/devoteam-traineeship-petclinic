@@ -22,5 +22,4 @@ deploy:
   tags:
     - cipipeline
   script:
-    - java -jar start.jar -Djetty.port=9999
-    - mvn jetty:run-war
+    - mvn jetty:run-war -Djetty.port=9999
