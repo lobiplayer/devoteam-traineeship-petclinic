@@ -17,9 +17,4 @@ test:
   script:
     - mvn clean test
 
-deploy:
-  stage: deploy
-  tags:
-    - cipipeline
-  script:
-    - mvn jetty:run-war -Djetty.port=9999
+
