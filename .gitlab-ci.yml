@@ -6,20 +6,20 @@ stages:
 build:
   stage: build
   tags:
-    - cipipeline
+    - desktoprunner
   script:
     - mvn compile
 
 test:
   stage: test
   tags:
-    - cipipeline
+    - desktoprunner
   script:
     - mvn clean test
 
 deploy:
   stage: deploy
   tags:
-    - cipipeline
+    - desktoprunner
   script:
     - mvn clean deploy -P release
