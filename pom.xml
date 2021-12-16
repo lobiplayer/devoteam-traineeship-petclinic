@@ -556,11 +556,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>nexusdeploymentrepo</id>
-            <url>http://192.168.2.125:8081/repository/maven-snapshots/</url>
+            <url>http://192.168.2.125:8081/repository/devoteam-traineeship-petclinic_SNAPSHOTS/</url>
         </snapshotRepository>
         <repository>
             <id>nexusdeploymentrepo</id>
-            <url>http://192.168.2.125:8081/repository/maven-releases/</url>
+            <url>http://192.168.2.125:8081/repository/devoteam-traineeship-petclinic_RELEASES/</url>
         </repository>
 
     </distributionManagement>
