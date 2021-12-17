@@ -22,4 +22,4 @@ deploy:
   tags:
     - desktoprunner
   script:
-    - mvn clean deploy -P release
+    - mvn  -Drepo.id=nexusdeploymentrepo -Drepo.login=admin -Drepo.pwd=AK9wSQXi9xdvj6B clean deploy
