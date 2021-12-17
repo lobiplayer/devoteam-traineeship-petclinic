@@ -6,20 +6,20 @@ stages:
 build:
   stage: build
   tags:
-    - cipipeline
+    - desktoprunner
   script:
     - mvn compile
 
 test:
   stage: test
   tags:
-    - cipipeline
+    - desktoprunner
   script:
     - mvn clean test
 
 deploy:
   stage: deploy
   tags:
-    - cipipeline
+    - desktoprunner
   script:
-    - mvn jetty:run-war -Djetty.port=9898
+    - mvn clean deploy -P release
