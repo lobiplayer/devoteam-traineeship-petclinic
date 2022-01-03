@@ -9,6 +9,9 @@ trigger:
 
 pool:
   name: 'petclinicpool'
+  demands:
+  - maven
+  - nexus
 
 steps:
 - script: mvn compile
