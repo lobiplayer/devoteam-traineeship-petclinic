@@ -20,8 +20,8 @@ steps:
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    mavenPath: '/opt/maven'
-    mavenSetM2Home: '/opt/maven'
+    mavenPath: '/opt/'
+    mavenSetM2Home: '/opt/'
     goals: 'package'
     
 - task: Maven@3
