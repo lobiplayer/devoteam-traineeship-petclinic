@@ -7,7 +7,7 @@ trigger:
 - '*'
 
 pool:
-  name: 'petstorepool'
+  name: 'petclinicpool'
 
 steps:
 - task: Maven@3
