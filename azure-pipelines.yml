@@ -18,3 +18,13 @@ stages:
   - job: maven_build
     steps:
     - script: mvn compile
+- stage: Test
+  jobs:
+  - job: maven_test
+    steps:
+    - script: mvn clean test
+- stage: Deploy
+  jobs:
+  - job: maven_deploy
+    steps:
+    - script: mvn  -Drepo.id=nexusdeploymentrepo -Drepo.login=admin -Drepo.pwd=AK9wSQXi9xdvj6B clean deploy
