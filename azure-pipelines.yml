@@ -13,15 +13,14 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    mavenPath: '/opt/'
-    mavenSetM2Home: '/opt/'
+    mavenPath: '/opt/maven'
+    mavenSetM2Home: '/opt/maven'
     goals: 'package'
     
 - task: Maven@3
