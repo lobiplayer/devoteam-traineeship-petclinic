@@ -8,6 +8,8 @@ trigger:
 
 pool:
   name: 'petclinicpool'
+  demands:
+  - maven
 
 steps:
 - task: Maven@3
@@ -21,8 +23,8 @@ steps:
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    mavenPath: '/opt/apache-maven-3.8.4'
-    mavenSetM2Home: '/opt/apache-maven-3.8.4'
+    mavenPath: '/opt/maven/bin'
+    mavenSetM2Home: '/opt/maven/bin'
     goals: 'package'
     
 - task: Maven@3
@@ -35,8 +37,8 @@ steps:
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    mavenPath: '/opt/maven'
-    mavenSetM2Home: '/opt/maven'
+    mavenPath: '/opt/maven/bin'
+    mavenSetM2Home: '/opt/maven/bin'
     goals: 'test'
 
 - task: Maven@3
@@ -50,6 +52,6 @@ steps:
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    mavenPath: '/opt/maven'
-    mavenSetM2Home: '/opt/maven'
+    mavenPath: '/opt/maven/bin'
+    mavenSetM2Home: '/opt/maven/bin'
     goals: 'deploy'
