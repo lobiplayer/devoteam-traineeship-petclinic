@@ -17,8 +17,10 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
+    jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    mavenPath: '/opt/maven'
     goals: 'package'
     
 - task: Maven@3
@@ -28,8 +30,10 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
+    jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    mavenPath: '/opt/maven'
     goals: 'test'
 
 - task: Maven@3
@@ -40,6 +44,8 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
+    jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    mavenPath: '/opt/maven'
     goals: 'deploy'
