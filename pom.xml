@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-framework-petclinic</artifactId>
-    <version>5.3.8</version>
+    <version>5.3.15</version>
 
     <name>Spring Framework Petclinic</name>
     <packaging>war</packaging>
@@ -546,36 +546,22 @@
    </profiles>
 
     <repositories>
-        
-        <repository>
-  <id>project.app</id>
-  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/project.app/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
-        
         <repository>
             <id>repository.spring.milestone</id>
             <name>Spring Milestone Repository</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>
-    
-      <distributionManagement>
-<repository>
-  <id>project.app</id>
-  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/project.app/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
-  </distributionManagement>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexusdeploymentrepo</id>
+            <url>http://192.168.2.125:8081/repository/devoteam-traineeship-petclinic_SNAPSHOTS/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexusdeploymentrepo</id>
+            <url>http://192.168.2.125:8081/repository/devoteam-traineeship-petclinic_RELEASES/</url>
+        </repository>
+
+    </distributionManagement>
 </project>
