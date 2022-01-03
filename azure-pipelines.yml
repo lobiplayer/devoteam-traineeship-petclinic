@@ -5,7 +5,7 @@
 
 #why is this not working?!!
 trigger:
-- 'azurerunner'
+- azurerunner
 
 pool:
   name: 'petclinicpool'
