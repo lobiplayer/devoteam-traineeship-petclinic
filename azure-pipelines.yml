@@ -1,0 +1,24 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+#why is this not working?!!
+trigger:
+- 'azurerunner'
+
+pool:
+  name: 'petclinicpool'
+  demands:
+  - maven
+  - nexusdeploymentrepo
+
+steps:
+- script: mvn compile
+  displayName: Maven build
+
+- script: mvn clean test
+  displayName: Maven test
+
+- script: - mvn -Drepo.id=nexusdeploymentrepo -Drepo.login=admin -Drepo.pwd=AK9wSQXi9xdvj6B clean deploy
+  displayName: Maven deploy to Nexus
