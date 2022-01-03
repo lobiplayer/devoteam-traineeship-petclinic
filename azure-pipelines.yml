@@ -9,6 +9,8 @@ trigger:
 
 pool:
   name: 'petclinicpool'
+  demands:
+  - maven
 
 steps:
 - task: Maven@3
