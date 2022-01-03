@@ -15,6 +15,6 @@ pool:
 stages:
 - stage: Build
   jobs:
-  - job: maven build
+  - job: maven_build
     steps:
     - script: mvn compile
