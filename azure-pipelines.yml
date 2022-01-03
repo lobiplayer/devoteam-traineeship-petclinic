@@ -14,11 +14,13 @@ pool:
   - nexus
 
 steps:
-- script: mvn compile
-  displayName: Maven build
-
-- script: mvn clean test
-  displayName: Maven test
-
-- script: - mvn -Drepo.id=nexusdeploymentrepo -Drepo.login=admin -Drepo.pwd=AK9wSQXi9xdvj6B clean deploy
-  displayName: Maven deploy to Nexus
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'package'
