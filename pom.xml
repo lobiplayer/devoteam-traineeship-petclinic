@@ -547,9 +547,9 @@
 
     <repositories>
         
-        <repository>
-  <id>project.app</id>
-  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/project.app/maven/v1</url>
+        <<repository>
+  <id>devoteam-traineeship-petclinic</id>
+  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/devoteam-traineeship-petclinic/maven/v1</url>
   <releases>
     <enabled>true</enabled>
   </releases>
@@ -557,18 +557,12 @@
     <enabled>true</enabled>
   </snapshots>
 </repository>
-        
-        <repository>
-            <id>repository.spring.milestone</id>
-            <name>Spring Milestone Repository</name>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
     </repositories>
     
       <distributionManagement>
 <repository>
-  <id>project.app</id>
-  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/project.app/maven/v1</url>
+  <id>devoteam-traineeship-petclinic</id>
+  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/devoteam-traineeship-petclinic/maven/v1</url>
   <releases>
     <enabled>true</enabled>
   </releases>
