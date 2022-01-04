@@ -16,9 +16,10 @@ steps:
 - task: MavenAuthenticate@0
   displayName: 'Maven Authenticate'
   inputs:
-    mavenServiceConnections: 'nexusdeploymentrepo'
+    mavenServiceConnections: nexusrelease, nexussnapshots
 
 - task: Maven@3
+  displayName: 'Maven Build'
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -30,6 +31,7 @@ steps:
     goals: 'package'
     
 - task: Maven@3
+  displayName: 'Maven Test'
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -41,6 +43,7 @@ steps:
     goals: 'test'
 
 - task: Maven@3
+  displayName: 'Maven Deploy'
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
