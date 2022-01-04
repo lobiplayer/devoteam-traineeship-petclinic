@@ -546,18 +546,7 @@
    </profiles>
 
     <repositories>
-        
-        <repository>
-  <id>devoteam-traineeship-petclinic</id>
-  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/devoteam-traineeship-petclinic/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
-        
+
         <repository>
             <id>repository.spring.milestone</id>
             <name>Spring Milestone Repository</name>
@@ -565,17 +554,18 @@
         </repository>
     </repositories>
     
-      <distributionManagement>
-<repository>
-  <id>devoteam-traineeship-petclinic</id>
-  <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/devoteam-traineeship-petclinic/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
-  </distributionManagement>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexusdeploymentrepo</id>
+            <url>http://192.168.2.125:8081/repository/devoteam-traineeship-petclinic_SNAPSHOTS/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexusdeploymentrepo</id>
+            <url>http://192.168.2.125:8081/repository/devoteam-traineeship-petclinic_RELEASES/</url>
+        </repository>
+
+    </distributionManagement>
+
 
 </project>

@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- 'azureartifacts'
+- 'nexusrepository'
 
 pool:
   vmImage: ubuntu-latest
@@ -17,7 +17,7 @@ steps:
   displayName: 'Maven Authenticate'
   inputs:
     artifactsFeeds: devoteam-traineeship-petclinic
-    mavenServiceConnections: azureartifacts
+    mavenServiceConnections: nexusdeploymentrepo
 
 - task: Maven@3
   inputs:
