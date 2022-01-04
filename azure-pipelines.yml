@@ -4,10 +4,12 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+- 'azureartifacts'
 
 pool:
   vmImage: ubuntu-latest
+  demands:
+  - maven
 
 steps:
 - task: Maven@3
