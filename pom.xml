@@ -547,7 +547,7 @@
 
     <repositories>
         
-        <<repository>
+        <repository>
   <id>devoteam-traineeship-petclinic</id>
   <url>https://pkgs.dev.azure.com/robinmohan/devoteam-traineeship-petclinic/_packaging/devoteam-traineeship-petclinic/maven/v1</url>
   <releases>
