@@ -33,7 +33,6 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
@@ -48,7 +47,6 @@ steps:
     mavenOptions: '-Xmx3072m'
     options: '-Drepo.id=nexusdeploymentrepo -Drepo.login=admin -Drepo.pwd=AK9wSQXi9xdvj6B'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
