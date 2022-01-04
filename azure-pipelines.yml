@@ -12,6 +12,12 @@ pool:
   - maven
 
 steps:
+
+- - task: MavenAuthenticate@0
+  displayName: 'Maven Authenticate'
+  inputs:
+    artifactsFeeds: devoteam-traineeship-petclinic
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
