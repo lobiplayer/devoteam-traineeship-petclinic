@@ -20,13 +20,12 @@ steps:
     mavenOptions: '-Xmx3072m'
     mavenVersionSelection: 'Default'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     jdkUserInputPath: '/usr/lib/jvm/default-java'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     mavenPath: '/opt/maven/bin'
-    mavenSetM2Home: '/opt/maven/bin'
+    mavenSetM2Home: '/opt/maven'
     goals: 'package'
     
 - task: Maven@3
@@ -40,7 +39,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     mavenPath: '/opt/maven/bin'
-    mavenSetM2Home: '/opt/maven/bin'
+    mavenSetM2Home: '/opt/maven'
     goals: 'test'
 
 - task: Maven@3
@@ -55,5 +54,5 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     mavenPath: '/opt/maven/bin'
-    mavenSetM2Home: '/opt/maven/bin'
+    mavenSetM2Home: '/opt/maven'
     goals: 'deploy'
