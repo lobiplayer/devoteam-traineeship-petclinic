@@ -13,7 +13,7 @@ pool:
 
 steps:
 
-- - task: MavenAuthenticate@0
+- task: MavenAuthenticate@0
   displayName: 'Maven Authenticate'
   inputs:
     artifactsFeeds: devoteam-traineeship-petclinic
