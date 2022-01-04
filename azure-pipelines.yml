@@ -10,6 +10,10 @@ pool:
   name: 'petclinicpool'
 
 steps:
+
+- script: echo 'Pleaseee work'
+  displayName: Test if the echo works
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
